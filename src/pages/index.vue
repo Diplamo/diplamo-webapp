@@ -17,48 +17,6 @@ useHead({
         <!-- Navbar partial -->
         <LandingEmptyNavigation />
 
-        <!--Hexagon shapes-->
-        <img
-          class="hexagon hexagon-1 light-image-l"
-          src="/images/icons/hexagons/accent.svg"
-          alt=""
-        />
-        <img
-          class="hexagon hexagon-1 dark-image-l"
-          src="/images/icons/hexagons/accent-heavy.svg"
-          alt=""
-        />
-        <img
-          class="hexagon hexagon-2 light-image-l"
-          src="/images/icons/hexagons/accent.svg"
-          alt=""
-        />
-        <img
-          class="hexagon hexagon-2 dark-image-l"
-          src="/images/icons/hexagons/accent-heavy.svg"
-          alt=""
-        />
-        <img
-          class="hexagon hexagon-3 light-image-l"
-          src="/images/icons/hexagons/green.svg"
-          alt=""
-        />
-        <img
-          class="hexagon hexagon-3 dark-image-l"
-          src="/images/icons/hexagons/green-heavy.svg"
-          alt=""
-        />
-        <img
-          class="hexagon hexagon-4 light-image-l"
-          src="/images/icons/hexagons/purple.svg"
-          alt=""
-        />
-        <img
-          class="hexagon hexagon-4 dark-image-l"
-          src="/images/icons/hexagons/purple-heavy.svg"
-          alt=""
-        />
-
         <div class="hero-body">
           <div class="container">
             <div class="columns is-vcentered">
