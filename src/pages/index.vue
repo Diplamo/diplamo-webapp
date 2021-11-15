@@ -100,6 +100,9 @@ useHead({
       <!--Funnel features-->
       <CustomMarketingSideFeatures />
 
+      <!--Funnel advantages-->
+      <CustomMarketingFeaturesIcons />
+
       <!--Feature boxes section-->
       <a id="features" name="features" aria-label="Features" />
       <MarketingFeaturesIcons />
