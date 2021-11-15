@@ -94,6 +94,9 @@ useHead({
         </div>
       </div>
 
+      <!--Funnel mockup-->
+      <CustomMarketingMockup />
+
       <!--Feature boxes section-->
       <a id="features" name="features" aria-label="Features" />
       <MarketingFeaturesIcons />
