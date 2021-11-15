@@ -15,7 +15,7 @@ useHead({
         class="hero marketing-hero is-left is-fullheight"
       >
         <!-- Navbar partial -->
-        <LandingEmptyNavigation />
+        <CustomLandingEmptyNavigation />
 
         <div class="hero-body">
           <div class="container">

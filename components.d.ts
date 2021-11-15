@@ -94,6 +94,7 @@ declare module 'vue' {
     ContentTitlesDocumentation: typeof import('./documentation/elements/content/content-titles-documentation.md')['default']
     ContentUnorderedListsDocumentation: typeof import('./documentation/elements/content/content-unordered-lists-documentation.md')['default']
     CourseDashboard: typeof import('./src/components/pages/dashboards/business/CourseDashboard.vue')['default']
+    CustomLandingEmptyNavigation: typeof import('C:/projects/ampersand frontend/src/components/custom/partials/landing/CustomLandingEmptyNavigation.vue')['default']
     CustomMarketingFeaturesIcons: typeof import('C:/projects/ampersand frontend/src/components/custom/partials/marketing/CustomMarketingFeaturesIcons.vue')['default']
     CustomMarketingMockup: typeof import('C:/projects/ampersand frontend/src/components/custom/partials/marketing/CustomMarketingMockup.vue')['default']
     CustomMarketingSideFeatures: typeof import('C:/projects/ampersand frontend/src/components/custom/partials/marketing/CustomMarketingSideFeatures.vue')['default']
