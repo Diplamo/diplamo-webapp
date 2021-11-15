@@ -131,7 +131,13 @@ useHead({
               <!-- Submit -->
               <VField>
                 <VControl class="login">
-                  <VButton color="primary" bold fullwidth raised>
+                  <VButton
+                    :to="{ name: 'auth-OnboardingV5' }"
+                    color="primary"
+                    bold
+                    fullwidth
+                    raised
+                  >
                     Sign Up
                   </VButton>
                 </VControl>
