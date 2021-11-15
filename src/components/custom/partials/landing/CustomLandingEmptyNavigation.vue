@@ -93,7 +93,7 @@ watchEffect(() => {
           </label>
         </div>
         <div class="navbar-item">
-          <RouterLink :to="{ name: 'auth-login' }" class="nav-link">
+          <RouterLink :to="{ name: 'auth-login-3' }" class="nav-link">
             Login
           </RouterLink>
         </div>

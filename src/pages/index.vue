@@ -29,7 +29,13 @@ useHead({
                   never before.
                 </h3>
                 <div class="buttons">
-                  <VButton color="primary" bold rounded raised>
+                  <VButton
+                    :to="{ name: 'auth-login-3' }"
+                    color="primary"
+                    bold
+                    rounded
+                    raised
+                  >
                     Join for free
                   </VButton>
                 </div>
