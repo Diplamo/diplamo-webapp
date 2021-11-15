@@ -22,11 +22,11 @@ useHead({
             <div class="columns is-vcentered">
               <div class="column is-5">
                 <h1 class="title is-1 is-bold">
-                  Send your achievements through the blockchain
+                  Show your achievements through the blockchain
                 </h1>
                 <h3 class="subtitle is-4 pt-2 light-text">
-                  Get non-fungible-tokens of your certificates. Share with your
-                  peers like never before.
+                  Move your certificates into the future. <br />Share them like
+                  never before.
                 </h3>
                 <div class="buttons">
                   <VButton color="primary" bold rounded raised>
@@ -51,6 +51,7 @@ useHead({
         </div>
       </div>
 
+      <!-- Funnel universities -->
       <p><br />/p></p>
       <div class="section-title has-text-centered">
         <h2 class="title is-3">Universtities using Ampersand</h2>
