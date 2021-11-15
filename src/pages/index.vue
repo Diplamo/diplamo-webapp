@@ -97,6 +97,9 @@ useHead({
       <!--Funnel mockup-->
       <CustomMarketingMockup />
 
+      <!--Funnel features-->
+      <CustomMarketingSideFeatures />
+
       <!--Feature boxes section-->
       <a id="features" name="features" aria-label="Features" />
       <MarketingFeaturesIcons />
