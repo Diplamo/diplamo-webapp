@@ -73,12 +73,12 @@
               color="primary"
               rounded
               elevated
-              href="https://docs.cssninja.io/vuero"
+              to="#"
             >
               Contact us
             </VButton>
             <a
-              href="https://cssninja.io"
+              to="#"
               target="_blank"
               rel="noopener"
               class="button chat-button is-secondary"

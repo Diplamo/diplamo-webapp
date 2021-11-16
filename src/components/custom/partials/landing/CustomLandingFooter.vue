@@ -8,15 +8,16 @@
         </div>
         <div class="head-action">
           <div class="buttons">
-            <a
-              href="https://themeforest.net/item/vuero-vuejs-3-admin-and-webapp-ui-kit/31053035"
-              class="button v-button is-primary is-rounded raised action-button"
+            <VButton
+              :to="{ name: 'auth-signup-3' }"
+              color="primary"
+              bold
+              rounded
+              raised
             >
               Sign up
-            </a>
-            <a href="https://cssninja.io" class="button chat-button">
-              Contact us
-            </a>
+            </VButton>
+            <a to="#" class="button chat-button"> Contact us </a>
           </div>
         </div>
       </div>
@@ -92,7 +93,7 @@
         </div>
       </div>
       <div class="footer-copyright has-text-centered">
-        <p>&copy; 2018-2021 | <a href="https://cssninja.io">Lillup</a></p>
+        <p>&copy; 2018-2021 | <a to="#">Lillup</a></p>
       </div>
     </div>
   </footer>

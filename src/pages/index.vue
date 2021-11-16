@@ -30,7 +30,7 @@ useHead({
                 </h3>
                 <div class="buttons">
                   <VButton
-                    :to="{ name: 'auth-login-3' }"
+                    :to="{ name: 'auth-signup-3' }"
                     color="primary"
                     bold
                     rounded
