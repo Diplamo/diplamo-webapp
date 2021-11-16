@@ -160,6 +160,9 @@ useHead({
       <!--About section-->
       <CustomMarketingAbout />
 
+      <!-- Footer -->
+      <CustomLandingFooter />
+
       <!--Feature boxes section-->
       <a id="features" name="features" aria-label="Features" />
       <MarketingFeaturesIcons />
