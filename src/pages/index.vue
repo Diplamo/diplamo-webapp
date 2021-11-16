@@ -152,6 +152,7 @@ useHead({
       </div>
 
       <!--Funnel advantages-->
+      <a id="features" name="features" aria-label="Features" />
       <CustomMarketingFeaturesIcons />
 
       <!--Funnel pricing & call to action -->
@@ -162,25 +163,6 @@ useHead({
 
       <!-- Footer -->
       <CustomLandingFooter />
-
-      <!--Feature boxes section-->
-      <a id="features" name="features" aria-label="Features" />
-      <MarketingFeaturesIcons />
-
-      <!--Pricing section-->
-      <MarketingPricings />
-
-      <!--Mockup Section-->
-      <MarketingMockup />
-
-      <!--Side Features Section-->
-      <MarketingSideFeatures />
-
-      <!--About section-->
-      <MarketingAbout />
-
-      <!-- Footer -->
-      <LandingFooter />
 
       <!-- Back To Top Button -->
       <div id="backtotop">
