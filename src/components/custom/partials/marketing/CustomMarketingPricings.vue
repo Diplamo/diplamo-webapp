@@ -63,8 +63,8 @@
       <!--CTA-->
       <div class="cta-block no-border">
         <div class="head-text">
-          <h3>Want to learn more?</h3>
-          <p>Check out the Vuero documentation</p>
+          <h3>Want to get started?</h3>
+          <p>Get your institution to adopt Ampersand.</p>
         </div>
         <div class="head-action">
           <div class="buttons">
@@ -75,7 +75,7 @@
               elevated
               href="https://docs.cssninja.io/vuero"
             >
-              Read the Docs
+              Let us know
             </VButton>
             <a
               href="https://cssninja.io"
@@ -83,7 +83,7 @@
               rel="noopener"
               class="button chat-button is-secondary"
             >
-              Chat with us
+              Schedule a call
             </a>
           </div>
         </div>
