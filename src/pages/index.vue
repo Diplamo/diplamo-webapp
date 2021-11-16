@@ -57,7 +57,7 @@ useHead({
         </div>
       </div>
 
-      <!-- Funnel universities -->
+      <!-- Funnel universities cred-->
       <p><br />/p></p>
       <div class="section-title has-text-centered">
         <h2 class="title is-3">Universtities using Ampersand</h2>
@@ -105,6 +105,51 @@ useHead({
 
       <!--Funnel features-->
       <CustomMarketingSideFeatures />
+
+      <!-- Funnel companies cred-->
+      <p><br />/p></p>
+      <div class="section-title has-text-centered">
+        <h2 class="title is-3">
+          Featured by industry-leading blockchain companies
+        </h2>
+      </div>
+
+      <div class="boxed-features is-flat pb-6">
+        <div class="flex-card light-bordered hover-inset">
+          <div class="flex-cell is-bordered">
+            <img src="/images/icons/stacks/vuejs-solo.svg" alt="" />
+          </div>
+          <div class="flex-cell">
+            <img src="/images/icons/stacks/typescript-square.svg" alt="" />
+          </div>
+          <div class="flex-cell is-bordered">
+            <img src="/images/icons/stacks/vite.svg" alt="" />
+          </div>
+          <div class="flex-cell">
+            <img src="/images/icons/stacks/vscode.svg" alt="" />
+          </div>
+          <div class="flex-cell is-bordered">
+            <img src="/images/icons/stacks/eslint.svg" alt="" />
+          </div>
+          <div class="flex-cell is-bordered">
+            <img src="/images/icons/stacks/prettier.svg" alt="" />
+          </div>
+          <div class="flex-cell">
+            <img
+              class="light-image-block-l"
+              src="/images/icons/stacks/stylelint.svg"
+              alt=""
+            /><img
+              class="dark-image-block-l"
+              src="/images/icons/stacks/stylelint-reverse.svg"
+              alt=""
+            />
+          </div>
+          <div class="flex-cell">
+            <img src="/images/icons/stacks/iconify.svg" alt="" />
+          </div>
+        </div>
+      </div>
 
       <!--Funnel advantages-->
       <CustomMarketingFeaturesIcons />
