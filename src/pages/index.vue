@@ -154,8 +154,11 @@ useHead({
       <!--Funnel advantages-->
       <CustomMarketingFeaturesIcons />
 
-      <!--Funnel pricing-->
+      <!--Funnel pricing & call to action -->
       <CustomMarketingPricings />
+
+      <!--About section-->
+      <CustomMarketingAbout />
 
       <!--Feature boxes section-->
       <a id="features" name="features" aria-label="Features" />
