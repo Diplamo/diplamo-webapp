@@ -96,35 +96,6 @@
           </p>
         </div>
       </div>
-
-      <!--CTA-->
-      <div class="cta-block no-border">
-        <div class="head-text">
-          <h3>Want to learn more?</h3>
-          <p>Check out the Vuero documentation</p>
-        </div>
-        <div class="head-action">
-          <div class="buttons">
-            <VButton
-              class="action-button"
-              color="primary"
-              rounded
-              elevated
-              href="https://docs.cssninja.io/vuero"
-            >
-              Read the Docs
-            </VButton>
-            <a
-              href="https://cssninja.io"
-              target="_blank"
-              rel="noopener"
-              class="button chat-button is-secondary"
-            >
-              Chat with us
-            </a>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
