@@ -64,7 +64,7 @@
       <div class="cta-block no-border">
         <div class="head-text">
           <h3>Want to get started?</h3>
-          <p>Get your institution to adopt Ampersand.</p>
+          <p>Let us know and we will contact your institution.</p>
         </div>
         <div class="head-action">
           <div class="buttons">
@@ -75,7 +75,7 @@
               elevated
               href="https://docs.cssninja.io/vuero"
             >
-              Let us know
+              Contact us
             </VButton>
             <a
               href="https://cssninja.io"

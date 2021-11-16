@@ -45,9 +45,9 @@
                 <div class="py-2 medium:py-4">
                   <h4 class="title is-5 is-narrow">The company</h4>
                   <p class="pt-2 max-w-3 text-medium">
-                    Lillup is an European startup founded in 2018. It´s mission
-                    is to leverage new technologies to reshape education and
-                    worklife.
+                    The company behind Ampersand is Lillup, an European startup
+                    founded in 2018. It´s mission is to leverage new
+                    technologies to reshape education and worklife.
                   </p>
                 </div>
               </div>
