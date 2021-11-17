@@ -3,14 +3,14 @@ import { useHead } from '@vueuse/head'
 
 import { pageTitle } from '/@src/state/navbarLayoutState'
 
-pageTitle.value = 'Profile View'
+pageTitle.value = 'View Certificates'
 useHead({
-  title: 'Profile View - Navbar - Vuero',
+  title: 'Profile - Ampersand',
 })
 </script>
 
 <template>
   <div class="page-content-inner">
-    <ViewProfile />
+    <CustomViewCertificates />
   </div>
 </template>

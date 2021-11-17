@@ -29,7 +29,7 @@ const handleLogin = async () => {
       router.push(redirect)
     } else {
       router.push({
-        name: 'profile-view',
+        name: 'view-certificates',
       })
     }
 
