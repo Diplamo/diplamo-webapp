@@ -11,6 +11,6 @@ useHead({
 
 <template>
   <div class="page-content-inner">
-    <CustomViewCertificates />
+    <CraftedViewCertificates />
   </div>
 </template>
