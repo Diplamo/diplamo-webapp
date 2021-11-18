@@ -192,146 +192,36 @@ watch(
     </transition>
 
     <!-- Desktop navigation -->
-    <NavbarSearch :theme="props.theme">
+    <CustomNavbarSearch :theme="props.theme">
       <!-- Custom navbar title -->
       <template #title>
-        <RouterLink :to="{ name: 'index' }" class="brand">
+        <RouterLink :to="{ name: 'view-certificates' }" class="brand">
           <AnimatedLogo width="38px" height="38px" />
         </RouterLink>
-        <div class="separator"></div>
-
-        <ProjectsQuickDropdown />
-        <h1 class="title is-6">{{ pageTitle }}</h1>
-      </template>
-
-      <template #subtitle>
-        <span>February 22, 2021</span>
       </template>
 
       <!-- Custom navbar toolbar -->
       <template #toolbar>
-        <Toolbar class="desktop-toolbar">
-          <ToolbarNotification />
+        <CustomToolbar class="desktop-toolbar">
+          <!-- <ToolbarNotification /> -->
+        </CustomToolbar>
 
-          <a
-            class="toolbar-link right-panel-trigger"
-            @click="activePanel = 'activity'"
-          >
-            <i aria-hidden="true" class="iconify" data-icon="feather:grid"></i>
-          </a>
-        </Toolbar>
-
-        <LayoutSwitcher />
-        <UserProfileDropdown />
-      </template>
-
-      <template #toolbar-bottom>
-        <VAvatarStack :avatars="users" :limit="3" size="small" />
-        <VDropdown spaced right>
-          <template #button="{ open }">
-            <VIconButton icon="feather:plus" circle @click="open" />
-          </template>
-          <template #content>
-            <a href="#" class="dropdown-item is-media">
-              <div class="icon">
-                <i aria-hidden="true" class="lnil lnil-analytics-alt-1"></i>
-              </div>
-              <div class="meta">
-                <span>New Dashboard</span>
-                <span>Add a new dashboard</span>
-              </div>
-            </a>
-            <a href="#" class="dropdown-item is-media">
-              <div class="icon">
-                <i aria-hidden="true" class="lnil lnil-users-alt"></i>
-              </div>
-              <div class="meta">
-                <span>Invite</span>
-                <span>Invite new members</span>
-              </div>
-            </a>
-            <a href="#" class="dropdown-item is-media">
-              <div class="icon">
-                <i aria-hidden="true" class="lnil lnil-briefcase"></i>
-              </div>
-              <div class="meta">
-                <span>New Project</span>
-                <span>Add a new project</span>
-              </div>
-            </a>
-            <hr class="dropdown-divider" />
-            <a href="#" class="dropdown-item is-media">
-              <div class="icon">
-                <i aria-hidden="true" class="lnil lnil-cog"></i>
-              </div>
-              <div class="meta">
-                <span>Settings</span>
-                <span>Manage team settings</span>
-              </div>
-            </a>
-          </template>
-        </VDropdown>
-      </template>
-
-      <!-- Custom navbar search -->
-      <template #search>
-        <div class="centered-search">
-          <div class="field">
-            <div class="control has-icon">
-              <input
-                v-model="filter"
-                type="text"
-                class="input search-input"
-                placeholder="Search records..."
-              />
-              <div class="form-icon">
-                <i
-                  aria-hidden="true"
-                  class="iconify"
-                  data-icon="feather:search"
-                ></i>
-              </div>
-              <div
-                v-if="filter"
-                class="form-icon is-right"
-                @click="filter = ''"
-              >
-                <i aria-hidden="true" class="iconify" data-icon="feather:x"></i>
-              </div>
-              <div
-                v-if="filteredData.length > 0"
-                class="search-results has-slimscroll is-active"
-              >
-                <div
-                  v-for="(user, key) in filteredData"
-                  :key="key"
-                  class="search-result"
-                >
-                  <VAvatar v-bind="getAvatarData(user)" />
-                  <div class="meta">
-                    <span>{{ user.username }}</span>
-                    <span>{{ user.position }}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!-- <LayoutSwitcher /> -->
+        <CustomUserProfileDropdown />
       </template>
 
       <!-- Desktop navigation -->
       <template #links>
-        <div class="buttons">
-          <a class="button">Dashboard</a>
-          <a class="button">Projects</a>
-          <a class="button">Team</a>
-          <a class="button">Reports</a>
-          <a class="button">Settings</a>
-        </div>
+        <VButtons>
+          <VButton color="primary"> View/Share Certificates </VButton>
+          <VButton color="primary"> Claim Certificates </VButton>
+          <VButton color="primary"> Send Certificates </VButton>
+          <VButton color="primary"> Help </VButton>
+        </VButtons>
       </template>
-    </NavbarSearch>
+    </CustomNavbarSearch>
 
-    <!-- <LanguagesPanel /> -->
+    <LanguagesPanel />
     <!-- <ActivityPanel /> -->
     <!-- <TaskPanel /> -->
 
@@ -348,20 +238,9 @@ watch(
                 <h1 class="title is-4">{{ pageTitle }}</h1>
               </div>
 
-              <Toolbar class="mobile-toolbar">
-                <ToolbarNotification />
-
-                <a
-                  class="toolbar-link right-panel-trigger"
-                  @click="activePanel = 'activity'"
-                >
-                  <i
-                    aria-hidden="true"
-                    class="iconify"
-                    data-icon="feather:grid"
-                  ></i>
-                </a>
-              </Toolbar>
+              <CustomToolbar class="mobile-toolbar">
+                <!-- <ToolbarNotification /> -->
+              </CustomToolbar>
             </div>
 
             <slot></slot>
