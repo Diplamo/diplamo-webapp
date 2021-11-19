@@ -213,10 +213,16 @@ watch(
       <!-- Desktop navigation -->
       <template #links>
         <VButtons>
-          <VButton color="primary"> View/Share Certificates </VButton>
-          <VButton color="primary"> Claim Certificates </VButton>
-          <VButton color="primary"> Send Certificates </VButton>
-          <VButton color="primary"> Help </VButton>
+          <VButton color="primary" :to="{ name: 'view-certificates' }">
+            View/Share Certificates
+          </VButton>
+          <VButton color="primary" :to="{ name: 'claim-certificates' }">
+            Claim Certificates
+          </VButton>
+          <VButton color="primary" :to="{ name: 'send-certificates' }">
+            Send Certificates
+          </VButton>
+          <VButton color="primary" :to="{ name: 'faq' }"> Help </VButton>
         </VButtons>
       </template>
     </CustomNavbarSearch>
