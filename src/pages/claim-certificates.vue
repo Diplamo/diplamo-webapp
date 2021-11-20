@@ -47,7 +47,7 @@ const openClaim = ref(false)
             <template #content>
               <VPlaceholderSection
                 title=""
-                subtitle="Enter the claim password to claim the certificate. Remember to claim the certificate only after checking that all the fields are correct. If any field is wrong, contact your organization and ask them to send it again."
+                subtitle="Enter the claim password to claim the certificate. Remember to claim the certificate only after checking that all the fields are correct. If any field is wrong, contact your organization and ask them to send the certificate again."
               />
               <form class="modal-form">
                 <div class="field">
