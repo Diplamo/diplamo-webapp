@@ -26,9 +26,9 @@
             Completely audited
           </h2>
           <p class="section-feature-description is-centered-tablet-portrait">
-            The inner workings of Ampersand have been extensively audited. They
-            are completely stored in the blockchain in the form of smart
-            contracts.
+            Ampersand is a secure solution. The inner workings of Ampersand have
+            been extensively audited. They are completely stored in the
+            blockchain in the form of smart contracts.
           </p>
         </div>
       </div>
@@ -57,8 +57,9 @@
           <h2 class="title m-b-10 is-centered-tablet-portrait">Money saver</h2>
           <p class="section-feature-description is-centered-tablet-portrait">
             Traditionally the costs associated with issuing certificates have
-            been significant, both for the institutions and the students.
-            Blockchain technology makes issuing them cheaper.
+            been significant for both institutions and students. Blockchain
+            technology makes issuing certificates cheap without disregarding
+            security.
           </p>
         </div>
         <div class="column is-6 has-text-centered h-hidden-mobile">
@@ -89,10 +90,14 @@
           />
         </div>
         <div class="column is-5">
-          <h2 class="title m-b-10 is-centered-tablet-portrait">Blazing fast</h2>
+          <h2 class="title m-b-10 is-centered-tablet-portrait">
+            Modern solution
+          </h2>
           <p class="section-feature-description is-centered-tablet-portrait">
-            In the past receiving a certificate could take months. Blockchain
-            technology makes sending and receiving certificates a breeze
+            The blockchain that stores the certificates are stored is a public
+            ledger by design. This means that all the logging requirements are
+            taken care for you and your institution, allowing you reduce
+            administrative complexity.
           </p>
         </div>
       </div>

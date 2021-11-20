@@ -25,8 +25,8 @@ useHead({
                   Show your achievements through the blockchain
                 </h1>
                 <h3 class="subtitle is-4 pt-2 light-text">
-                  Move your certificates into the future. <br />Share them like
-                  never before.
+                  Move your certificates into the future. <br />Make paperwork a
+                  breeze.
                 </h3>
                 <div class="buttons">
                   <VButton
@@ -58,47 +58,32 @@ useHead({
       </div>
 
       <!-- Funnel universities cred-->
-      <p><br />/p></p>
-      <div class="section-title has-text-centered">
-        <h2 class="title is-3">Universtities using Ampersand</h2>
-      </div>
-
-      <div class="boxed-features is-flat pb-6">
-        <div class="flex-card light-bordered hover-inset">
-          <div class="flex-cell is-bordered">
-            <img src="/images/icons/stacks/vuejs-solo.svg" alt="" />
-          </div>
-          <div class="flex-cell">
-            <img src="/images/icons/stacks/typescript-square.svg" alt="" />
-          </div>
-          <div class="flex-cell is-bordered">
-            <img src="/images/icons/stacks/vite.svg" alt="" />
-          </div>
-          <div class="flex-cell">
-            <img src="/images/icons/stacks/vscode.svg" alt="" />
-          </div>
-          <div class="flex-cell is-bordered">
-            <img src="/images/icons/stacks/eslint.svg" alt="" />
-          </div>
-          <div class="flex-cell is-bordered">
-            <img src="/images/icons/stacks/prettier.svg" alt="" />
-          </div>
-          <div class="flex-cell">
-            <img
-              class="light-image-block-l"
-              src="/images/icons/stacks/stylelint.svg"
-              alt=""
-            /><img
-              class="dark-image-block-l"
-              src="/images/icons/stacks/stylelint-reverse.svg"
-              alt=""
-            />
-          </div>
-          <div class="flex-cell">
-            <img src="/images/icons/stacks/iconify.svg" alt="" />
-          </div>
+      <section class="section has-text-centered has-background-white-bis">
+        <h1 class="title">Universities not using Ampersand</h1>
+      </section>
+      <nav class="level has-background-white-bis pb-4 pt-4">
+        <div class="level-item has-text-centered">
+          <img src="/uni-logos/MIT.svg" alt="" style="height: 40px" />
         </div>
-      </div>
+        <div class="level-item has-text-centered">
+          <img src="/uni-logos/Berkeley.svg" alt="" style="height: 40px" />
+        </div>
+        <div class="level-item has-text-centered">
+          <img src="/uni-logos/Lausanne.svg" alt="" style="height: 55px" />
+        </div>
+        <div class="level-item has-text-centered">
+          <img src="/uni-logos/Oviedo.png" alt="" style="height: 70px" />
+        </div>
+        <div class="level-item has-text-centered">
+          <img src="/uni-logos/Warsaw.svg" alt="" style="height: 60px" />
+        </div>
+        <div class="level-item has-text-centered">
+          <img src="/uni-logos/Moscow.svg" alt="" style="height: 85px" />
+        </div>
+        <div class="level-item has-text-centered">
+          <img src="/uni-logos/Mumbai.svg" alt="" style="height: 60px" />
+        </div>
+      </nav>
 
       <!--Funnel mockup-->
       <CustomMarketingMockup />
@@ -106,50 +91,24 @@ useHead({
       <!--Funnel features-->
       <CustomMarketingSideFeatures />
 
-      <!-- Funnel companies cred-->
-      <p><br />/p></p>
-      <div class="section-title has-text-centered">
-        <h2 class="title is-3">
-          Featured by industry-leading blockchain companies
-        </h2>
-      </div>
-
-      <div class="boxed-features is-flat pb-6">
-        <div class="flex-card light-bordered hover-inset">
-          <div class="flex-cell is-bordered">
-            <img src="/images/icons/stacks/vuejs-solo.svg" alt="" />
-          </div>
-          <div class="flex-cell">
-            <img src="/images/icons/stacks/typescript-square.svg" alt="" />
-          </div>
-          <div class="flex-cell is-bordered">
-            <img src="/images/icons/stacks/vite.svg" alt="" />
-          </div>
-          <div class="flex-cell">
-            <img src="/images/icons/stacks/vscode.svg" alt="" />
-          </div>
-          <div class="flex-cell is-bordered">
-            <img src="/images/icons/stacks/eslint.svg" alt="" />
-          </div>
-          <div class="flex-cell is-bordered">
-            <img src="/images/icons/stacks/prettier.svg" alt="" />
-          </div>
-          <div class="flex-cell">
-            <img
-              class="light-image-block-l"
-              src="/images/icons/stacks/stylelint.svg"
-              alt=""
-            /><img
-              class="dark-image-block-l"
-              src="/images/icons/stacks/stylelint-reverse.svg"
-              alt=""
-            />
-          </div>
-          <div class="flex-cell">
-            <img src="/images/icons/stacks/iconify.svg" alt="" />
-          </div>
+      <!-- Funnel universities cred-->
+      <section class="section has-text-centered has-background-white-bis">
+        <h1 class="title">Featured by industry-leading blockchain companies</h1>
+      </section>
+      <nav class="level has-background-white-bis pb-4 pt-4">
+        <div class="level-item has-text-centered">
+          <img src="/org-logos/Chainlink.svg" alt="" style="height: 60px" />
         </div>
-      </div>
+        <div class="level-item has-text-centered">
+          <img src="/org-logos/Polygon.svg" alt="" style="height: 60px" />
+        </div>
+        <div class="level-item has-text-centered">
+          <img src="/org-logos/Moralis.svg" alt="" style="height: 60px" />
+        </div>
+        <div class="level-item has-text-centered">
+          <img src="/org-logos/Alchemy.svg" alt="" style="height: 60px" />
+        </div>
+      </nav>
 
       <!--Funnel advantages-->
       <a id="features" name="features" aria-label="Features" />

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="footer-head">
         <div class="head-text">
-          <h3>Ready to get started?</h3>
+          <h3>Ready to join the future?</h3>
           <p>Sign up and see how the app works</p>
         </div>
         <div class="head-action">

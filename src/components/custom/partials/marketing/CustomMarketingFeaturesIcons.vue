@@ -22,24 +22,7 @@
                 <p class="subtitle is-6 light-text">
                   <br /><br /><br /><br />
                   Do away with administrative complexity. Ampersand makes
-                  receiving certificates fast and easy.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!--Box-->
-          <div class="column is-3">
-            <div class="card card-icon-box">
-              <div class="card-content">
-                <VIconBox size="medium" color="warning">
-                  <i aria-hidden="true" class="lnir lnir-laptop-alt-switch"></i>
-                </VIconBox>
-
-                <h4 class="title is-5"><br />Modernize your institution</h4>
-                <p class="subtitle is-6 light-text">
-                  <br /><br /><br /><br />
-                  Put your institution at the forefront of technological
-                  modernization.
+                  receiving certificates simple.
                 </p>
               </div>
             </div>
@@ -74,6 +57,24 @@
                   <br /><br /><br /><br />
                   Leverage blockchain technologies to make your institution
                   fraud-resistant.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--Box-->
+          <div class="column is-3">
+            <div class="card card-icon-box">
+              <div class="card-content">
+                <VIconBox size="medium" color="warning">
+                  <i aria-hidden="true" class="lnir lnir-laptop-alt-switch"></i>
+                </VIconBox>
+
+                <h4 class="title is-5">Modernize your institution</h4>
+                <p class="subtitle is-6 light-text">
+                  <br /><br />
+                  Put your institution at the forefront of technological
+                  modernization. Be first in line for future innovations in the
+                  intersection of blockchain and education.
                 </p>
               </div>
             </div>

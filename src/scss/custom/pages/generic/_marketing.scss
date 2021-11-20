@@ -392,7 +392,7 @@ Marketing Layouts
       font-weight: bold;
 
       &::after {
-        content: ' /per month';
+        content: '';
         font-size: 1rem;
         font-weight: normal;
         color: var(--light-text);
