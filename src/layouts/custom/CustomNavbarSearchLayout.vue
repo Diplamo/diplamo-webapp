@@ -214,15 +214,23 @@ watch(
       <template #links>
         <VButtons>
           <VButton color="primary" :to="{ name: 'view-certificates' }">
-            View/Share Certificates
+            View/Share Certificates (s)
+          </VButton>
+          <VButton color="primary" :to="{ name: 'request-certificates' }">
+            Request Certificates (s)
           </VButton>
           <VButton color="primary" :to="{ name: 'claim-certificates' }">
-            Claim Certificates
+            Claim Certificates (s)
           </VButton>
-          <VButton color="primary" :to="{ name: 'send-certificates' }">
-            Send Certificates
+          <VButton color="primary" :to="{ name: 'view-send-requests' }">
+            View Certificate Requests (u)
           </VButton>
-          <VButton color="primary" :to="{ name: 'faq' }"> Help </VButton>
+          <VButton color="primary" :to="{ name: 'view-certificates-sent' }">
+            View Certificates Sent (u)
+          </VButton>
+          <VButton color="primary" :to="{ name: 'faq' }">
+            Help (u and s)</VButton
+          >
         </VButtons>
       </template>
     </CustomNavbarSearch>
