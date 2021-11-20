@@ -63,6 +63,6 @@ const isScrolling = computed(() => {
 
 <style lang="scss">
 @import '../../../../scss/abstracts/_mixins.scss';
-@import '../../../../scss/layout/_navbar-extension.scss';
+@import '../../../../scss/custom/layout/custom_navbar-extension.scss';
 @import '../../../../scss/layout/_responsive.scss';
 </style>
