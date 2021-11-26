@@ -10,9 +10,9 @@
 import { useHead } from '@vueuse/head'
 import { pageTitle } from '/@src/state/navbarLayoutState'
 
-pageTitle.value = 'View Certificates'
+pageTitle.value = 'FAQ'
 useHead({
-  title: 'View Certificates',
+  title: 'FAQ',
 })
 
 const data = [
@@ -26,6 +26,23 @@ const data = [
   },
   {
     title: 'Can I delete a certificate?',
+    content: 'Sed ut perspiciatis unde omnis iste ...',
+  },
+  {
+    title:
+      'How do I confirm that I´m sending the certificate to the correct student?',
+    content: 'Sed ut perspiciatis unde omnis iste ...',
+  },
+  {
+    title: 'What if ... ?',
+    content: 'Sed ut perspiciatis unde omnis iste ...',
+  },
+  {
+    title: 'What if ... ?',
+    content: 'Sed ut perspiciatis unde omnis iste ...',
+  },
+  {
+    title: 'What if ... ?',
     content: 'Sed ut perspiciatis unde omnis iste ...',
   },
 ]

@@ -27,7 +27,7 @@ const data = [
   {
     id: 1,
     university: 'University of Berkeley',
-    degree: 'Bachelor in Computer Science',
+    degree: 'Bachelors in Math',
     date: '2017-2020',
     grade: '3.5/4.0',
     verified: 'Yes',

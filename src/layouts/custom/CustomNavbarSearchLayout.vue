@@ -86,7 +86,12 @@ watch(
     >
       <template #brand>
         <RouterLink :to="{ name: 'index' }" class="navbar-item is-brand">
-          <AnimatedLogo width="38px" height="38px" />
+          <img
+            src="../../assets/illustrations/diplamo-logo.svg"
+            alt=""
+            width="38px"
+            height="38px"
+          />
         </RouterLink>
 
         <div class="brand-end">
@@ -196,8 +201,16 @@ watch(
       <!-- Custom navbar title -->
       <template #title>
         <RouterLink :to="{ name: 'view-certificates' }" class="brand">
-          <AnimatedLogo width="38px" height="38px" />
+          <img
+            src="../../assets/illustrations/diplamo-logo.svg"
+            alt=""
+            width="38px"
+            height="38px"
+          />
         </RouterLink>
+        <div class="navbar-item">
+          <a class="nav-link title is-3 is-bold"> Diplamo </a>
+        </div>
       </template>
 
       <!-- Custom navbar toolbar -->
@@ -235,7 +248,7 @@ watch(
       </template>
     </CustomNavbarSearch>
 
-    <LanguagesPanel />
+    <CustomLanguagesPanel />
     <!-- <ActivityPanel /> -->
     <!-- <TaskPanel /> -->
 

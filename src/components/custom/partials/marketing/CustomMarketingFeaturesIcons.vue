@@ -1,5 +1,5 @@
 <template>
-  <div class="section has-bg-dots">
+  <div class="section">
     <div class="container">
       <!--Title-->
       <div class="section-title has-text-centered py-6">
@@ -14,15 +14,15 @@
           <div class="column is-3">
             <div class="card card-icon-box">
               <div class="card-content">
-                <VIconBox size="medium" color="blue">
+                <VIconBox size="medium" color="red">
                   <i aria-hidden="true" class="lnir lnir-unlink"></i>
                 </VIconBox>
 
                 <h4 class="title is-5"><br />Less paperwork</h4>
                 <p class="subtitle is-6 light-text">
                   <br /><br /><br /><br />
-                  Do away with administrative complexity. Ampersand makes
-                  receiving certificates simple.
+                  Do away with administrative complexity. Diplamo makes issuing
+                  and receiving certificates simple.
                 </p>
               </div>
             </div>
@@ -31,15 +31,15 @@
           <div class="column is-3">
             <div class="card card-icon-box">
               <div class="card-content">
-                <VIconBox size="medium" color="success">
+                <VIconBox size="medium" color="red">
                   <i aria-hidden="true" class="lnir lnir-coin"></i>
                 </VIconBox>
 
                 <h4 class="title is-5"><br />Save costs</h4>
                 <p class="subtitle is-6 light-text">
-                  <br /><br /><br />
-                  Universities that fully migrate to tokenized certificates
-                  obtain big savings. Students pay nothing for the certificates.
+                  <br /><br /><br /><br />
+                  Your instituion can obtain big saving by migrating to
+                  tokenized certificates. For students, it's free.
                 </p>
               </div>
             </div>
@@ -48,7 +48,7 @@
           <div class="column is-3">
             <div class="card card-icon-box">
               <div class="card-content">
-                <VIconBox size="medium" color="purple">
+                <VIconBox size="medium" color="red">
                   <i aria-hidden="true" class="lnir lnir-file-lock"></i>
                 </VIconBox>
 
@@ -65,7 +65,7 @@
           <div class="column is-3">
             <div class="card card-icon-box">
               <div class="card-content">
-                <VIconBox size="medium" color="warning">
+                <VIconBox size="medium" color="red">
                   <i aria-hidden="true" class="lnir lnir-laptop-alt-switch"></i>
                 </VIconBox>
 

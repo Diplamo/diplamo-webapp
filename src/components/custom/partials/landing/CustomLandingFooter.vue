@@ -25,10 +25,15 @@
         <!-- Column -->
         <div class="column is-4">
           <div class="p-t-10 p-b-10">
-            <AnimatedLogo width="36px" height="36px" />
-
+            <!-- <AnimatedLogo width="36px" height="36px" /> -->
+            <img
+              src="../../../../assets/illustrations/diplamo-logo.svg"
+              alt=""
+              width="64px"
+              height="64px"
+            />
             <div class="footer-description p-t-10 p-b-10">
-              Ampersand is built for students and institutions alike. It's
+              Diplamo is built for students and institutions alike. It's
               intuitive design makes issuing and sharing certificates a breeze.
             </div>
           </div>

@@ -10,9 +10,9 @@
 import { useHead } from '@vueuse/head'
 import { pageTitle } from '/@src/state/navbarLayoutState'
 
-pageTitle.value = 'View Certificates'
+pageTitle.value = 'Certificate Password'
 useHead({
-  title: 'View Certificates',
+  title: 'Certificate Password',
 })
 </script>
 
@@ -32,11 +32,11 @@ useHead({
             An email has been sent to the student notifying him that he will be
             able to claim the certificate once your organization sends him the
             "student claim password". <br /><br />
-            *Lillup, the company behind Ampersand, does not keep 'Know Your
-            Customer' data on students. In this way, in order to fulfill
-            security measures and verify that the student is in fact the person
-            claiming the certificate, the University must comunicate the
-            "student claim password" to the student through their own channels.
+            *Diplamo does not keep 'Know Your Customer' data on students. In
+            this way, in order to fulfill security measures and verify that the
+            student is in fact the person claiming the certificate, the
+            University must comunicate the "student claim password" to the
+            student through their own channels.
           </p>
         </VCard>
       </div>

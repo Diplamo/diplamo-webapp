@@ -2,7 +2,7 @@
 import { useHead } from '@vueuse/head'
 
 useHead({
-  title: 'Vuero - A complete Vue 3 design system',
+  title: 'Diplamo - Blockchain diplomas',
 })
 </script>
 

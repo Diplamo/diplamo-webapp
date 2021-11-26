@@ -68,7 +68,7 @@ export async function createApp({ enhanceApp }: VueroAppOptions) {
        *       <component :is="Component" />
        *     </transition>
        *   </RouterView>
-       *   <VReloadPrompt app-name="Vuero" />
+       *   <VReloadPrompt app-name="Diplamo" />
        * </template>
        */
       return () => {
@@ -90,7 +90,7 @@ export async function createApp({ enhanceApp }: VueroAppOptions) {
           h(RouterView, null, {
             default: defaultSlot,
           }),
-          h(VReloadPrompt, { appName: 'Vuero' }),
+          h(VReloadPrompt, { appName: 'Diplamo' }),
         ]
       }
     },

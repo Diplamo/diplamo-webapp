@@ -1,10 +1,10 @@
 <template>
-  <div class="section has-bg-dots">
+  <div class="section">
     <div class="container">
       <!--Title-->
       <div class="section-title has-text-centered">
         <h2 class="title is-2">Simplify processes</h2>
-        <h4>Ampersand makes it easy to issue and recieve certificates</h4>
+        <h4>Diplamo makes it easy to issue and recieve certificates</h4>
       </div>
 
       <div class="centered-mockup-wrapper">
@@ -12,21 +12,21 @@
           <!--Mockup-->
           <img
             class="light-image-l centered-mockup"
-            src="/@src/assets/illustrations/landing/app-1.png"
+            src="/@src/assets/illustrations/landing/ui-example.png"
             alt=""
           />
           <img
             class="dark-image-l centered-mockup"
-            src="/@src/assets/illustrations/landing/app-1-dark.png"
+            src="/@src/assets/illustrations/landing/ui-example.png"
             alt=""
           />
         </div>
         <div class="columns">
           <div class="column is-4">
-            <h3 class="title is-4">Intuitive UI</h3>
+            <h3 class="title is-4">Simple UI</h3>
             <p class="subtitle is-6 light-text">
-              The app can be used without any training by both administrators
-              and students.
+              The app has a simple design that is easy to use by both
+              administrators and students.
             </p>
           </div>
           <div class="column is-4">

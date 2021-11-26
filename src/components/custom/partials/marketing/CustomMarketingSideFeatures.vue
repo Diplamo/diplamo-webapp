@@ -12,23 +12,21 @@
         <div class="column is-6 has-text-centered">
           <img
             class="light-image-l featured-image"
-            src="/@src/assets/illustrations/landing/feature-1.png"
+            src="/@src/assets/illustrations/landing/vault.svg"
             alt=""
           />
           <img
             class="dark-image-l featured-image"
-            src="/@src/assets/illustrations/landing/feature-1-dark.png"
+            src="/@src/assets/illustrations/landing/vault.svg"
             alt=""
           />
         </div>
         <div class="column is-5">
-          <h2 class="title m-b-10 is-centered-tablet-portrait">
-            Completely audited
-          </h2>
+          <h2 class="title m-b-10 is-centered-tablet-portrait">Audited</h2>
           <p class="section-feature-description is-centered-tablet-portrait">
-            Ampersand is a secure solution. The inner workings of Ampersand have
-            been extensively audited. They are completely stored in the
-            blockchain in the form of smart contracts.
+            Diplamo is a secure solution. Its inner workings have been audited
+            by blockchain professionals. The certificate logic is stored in the
+            blockchain.
           </p>
         </div>
       </div>
@@ -44,33 +42,33 @@
         >
           <img
             class="light-image-l featured-image"
-            src="/@src/assets/illustrations/landing/feature-2.svg"
+            src="/@src/assets/illustrations/landing/wallet.svg"
             alt=""
           />
           <img
             class="dark-image-l featured-image"
-            src="/@src/assets/illustrations/landing/feature-2-dark.svg"
+            src="/@src/assets/illustrations/landing/wallet.svg"
             alt=""
           />
         </div>
         <div class="column is-5 is-offset-1">
           <h2 class="title m-b-10 is-centered-tablet-portrait">Money saver</h2>
           <p class="section-feature-description is-centered-tablet-portrait">
-            Traditionally the costs associated with issuing certificates have
-            been significant for both institutions and students. Blockchain
-            technology makes issuing certificates cheap without disregarding
+            Diplamo saves money to both students and institutions when compared
+            with the traditional costs of issuing certificates. It leverages
+            technology to make issuing certificates cheaper without disregarding
             security.
           </p>
         </div>
         <div class="column is-6 has-text-centered h-hidden-mobile">
           <img
             class="light-image-l featured-image"
-            src="/@src/assets/illustrations/landing/feature-2.svg"
+            src="/@src/assets/illustrations/landing/wallet.svg"
             alt=""
           />
           <img
             class="dark-image-l featured-image"
-            src="/@src/assets/illustrations/landing/feature-2-dark.svg"
+            src="/@src/assets/illustrations/landing/wallet.svg"
             alt=""
           />
         </div>
@@ -80,12 +78,12 @@
         <div class="column is-6 has-text-centered">
           <img
             class="light-image-l featured-image"
-            src="/@src/assets/illustrations/landing/feature-3.svg"
+            src="/@src/assets/illustrations/landing/macbook.svg"
             alt=""
           />
           <img
             class="dark-image-l featured-image"
-            src="/@src/assets/illustrations/landing/feature-3-dark.svg"
+            src="/@src/assets/illustrations/landing/macbook.svg"
             alt=""
           />
         </div>
@@ -94,10 +92,10 @@
             Modern solution
           </h2>
           <p class="section-feature-description is-centered-tablet-portrait">
-            The blockchain that stores the certificates are stored is a public
-            ledger by design. This means that all the logging requirements are
-            taken care for you and your institution, allowing you reduce
-            administrative complexity.
+            Diplamo uses blockchain technology, which by design is a public
+            ledger. This means that all the logging requirements are taken care
+            for you and your institution, allowing you reduce administrative
+            complexity.
           </p>
         </div>
       </div>

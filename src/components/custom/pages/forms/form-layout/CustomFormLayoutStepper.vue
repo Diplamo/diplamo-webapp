@@ -153,6 +153,7 @@ const validateStep = async () => {
 
             <div class="form-section-inner">
               <VField>
+                <label>Title</label>
                 <VControl>
                   <input
                     type="text"
@@ -192,7 +193,7 @@ const validateStep = async () => {
                   <v-date-picker v-model="initialDate" color="green" trim-weeks>
                     <template #default="{ inputValue, inputEvents }">
                       <VField>
-                        <label>Prefered Date</label>
+                        <label>Start date</label>
                         <VControl icon="feather:calendar">
                           <input
                             class="input"
@@ -210,7 +211,7 @@ const validateStep = async () => {
                   <v-date-picker v-model="finalDate" color="green" trim-weeks>
                     <template #default="{ inputValue, inputEvents }">
                       <VField>
-                        <label>Prefered Date</label>
+                        <label>Completion date</label>
                         <VControl icon="feather:calendar">
                           <input
                             class="input"
@@ -255,6 +256,7 @@ const validateStep = async () => {
               <div class="columns">
                 <div class="column is-6">
                   <VField>
+                    <label>Score</label>
                     <VControl>
                       <input type="text" class="input" placeholder="Score" />
                     </VControl>
@@ -262,6 +264,7 @@ const validateStep = async () => {
                 </div>
                 <div class="column is-6">
                   <VField>
+                    <label>Maximum score</label>
                     <VControl>
                       <input
                         type="text"
@@ -314,9 +317,6 @@ const validateStep = async () => {
                     <li>Dates: 01-07-2018 to 01-05-2021</li>
                     <li>Grade: 7/10</li>
                   </l>
-                </div>
-                <div class="box-illustration">
-                  <img src="/@src/assets/illustrations/plants/1.svg" alt="" />
                 </div>
               </div>
             </div>

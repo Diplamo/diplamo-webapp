@@ -11,9 +11,9 @@ import { useHead } from '@vueuse/head'
 import { pageTitle } from '/@src/state/navbarLayoutState'
 import { ref } from 'vue'
 
-pageTitle.value = 'View Certificates'
+pageTitle.value = 'View Requests'
 useHead({
-  title: 'View Certificates',
+  title: 'View Requests',
 })
 
 const openClaim = ref(false)
@@ -24,7 +24,7 @@ const openClaim = ref(false)
     <!-- Content Wrapper -->
     <div class="page-content-inner">
       <VCardAdvanced title="Greta K." subtitle="Sales Manager">
-        <template #header-left> Konrad Kovalski </template>
+        <template #header-left> John Doe </template>
         <template #content>
           <l>
             <li>Degree: Math BSc</li>
@@ -40,10 +40,10 @@ const openClaim = ref(false)
       </VCardAdvanced>
       <br /><br />
       <VCardAdvanced title="Greta K." subtitle="Sales Manager">
-        <template #header-left> Konrad Kovalski </template>
+        <template #header-left> John Doe </template>
         <template #content>
           <l>
-            <li>Degree: Robotis Summer Workshop</li>
+            <li>Degree: Robotics Summer Workshop</li>
             <li>Dates: 01-05-2021 to 15-05-2021</li>
             <li>Wallet: b32e9a84as0b45b8 ab715e4df793a61b277bafa3</li>
           </l>

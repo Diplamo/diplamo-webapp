@@ -15,7 +15,7 @@
         <VAvatar size="large" picture="/images/avatars/svg/vuero-1.svg" />
 
         <div class="meta">
-          <span>Erik Kovalsky</span>
+          <span>John Doe</span>
           <span>Student</span>
         </div>
       </div>

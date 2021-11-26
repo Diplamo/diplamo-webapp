@@ -10,9 +10,9 @@
 import { useHead } from '@vueuse/head'
 import { pageTitle } from '/@src/state/navbarLayoutState'
 
-pageTitle.value = 'View Certificates'
+pageTitle.value = 'Request Certificates'
 useHead({
-  title: 'View Certificates',
+  title: 'Request Certificates',
 })
 </script>
 

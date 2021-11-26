@@ -1,5 +1,5 @@
 <template>
-  <div class="section has-bg-dots">
+  <div class="section has">
     <div class="container">
       <!--Title-->
       <div class="section-title has-text-centered">
@@ -12,8 +12,21 @@
         <!--Pricing plan-->
         <div class="pricing-plan">
           <div class="name">Student</div>
-          <img src="/images/logos/logo/logo-platinum.svg" alt="" />
-          <div class="price">Free</div>
+          <img
+            class="light-image-l"
+            src="../../../../assets/illustrations/pricing/student.png"
+            alt=""
+          />
+          <img
+            class="dark-image-l"
+            src="../../../../assets/illustrations/pricing/student-white.png"
+            alt=""
+          />
+          <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+          <div class="price">
+            Free <br />
+            <div class="fees"><br /></div>
+          </div>
           <!-- <div class="trial">Forever free</div> -->
           <hr />
           <ul>
@@ -35,8 +48,21 @@
         <!--Pricing plan-->
         <div class="pricing-plan">
           <div class="name">University</div>
-          <img src="/images/logos/logo/logo-accent.svg" alt="" />
-          <div class="price">$5 per certificate</div>
+          <img
+            class="light-image-l"
+            src="../../../../assets/illustrations/pricing/univeristy.png"
+            alt=""
+          />
+          <img
+            class="dark-image-l"
+            src="../../../../assets/illustrations/pricing/university-white.png"
+            alt=""
+          />
+          <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+          <div class="price">
+            Fee per certificate
+            <div class="fees">Blockchain transfer fee + 30%</div>
+          </div>
           <!-- <div class="trial">Free 14 day trial</div> -->
           <hr />
           <ul>

@@ -23,7 +23,7 @@ const handleLogin = async () => {
     userSession.setToken('logged-in')
 
     notif.dismissAll()
-    notif.success('Welcome back, Erik Kovalsky')
+    notif.success('Welcome back, John Doe')
 
     if (redirect) {
       router.push(redirect)
@@ -38,7 +38,7 @@ const handleLogin = async () => {
 }
 
 useHead({
-  title: 'Auth Login - Vuero',
+  title: 'Diplamo - Login',
 })
 </script>
 

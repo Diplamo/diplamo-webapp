@@ -11,9 +11,9 @@ import { useHead } from '@vueuse/head'
 import { pageTitle } from '/@src/state/navbarLayoutState'
 import { ref } from 'vue'
 
-pageTitle.value = 'View Certificates'
+pageTitle.value = 'Claim Certificates'
 useHead({
-  title: 'View Certificates',
+  title: 'Claim Certificates',
 })
 const openClaim = ref(false)
 </script>
@@ -22,7 +22,7 @@ const openClaim = ref(false)
   <CustomNavbarSearchLayout theme="center">
     <!-- Content Wrapper -->
     <div class="page-content-inner">
-      <VCardAdvanced title="Greta K." subtitle="Sales Manager">
+      <VCardAdvanced title="" subtitle="">
         <template #header-left> University of Berkeley </template>
         <template #content>
           <l>
@@ -69,7 +69,7 @@ const openClaim = ref(false)
         </template>
       </VCardAdvanced>
       <br /><br />
-      <VCardAdvanced title="Greta K." subtitle="Sales Manager">
+      <VCardAdvanced title="" subtitle="">
         <template #header-left>
           Massachusetts Institute of Technology
         </template>
