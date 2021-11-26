@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useHead } from '@vueuse/head'
+import '@lottiefiles/lottie-player'
 
 useHead({
   title: 'Diplamo - Blockchain diplomas',
@@ -40,8 +41,19 @@ useHead({
                   </VButton>
                 </div>
               </div>
-              <div class="column is-7">
-                <img
+              <div class="column is-7 pl-6">
+                <lottie-player
+                  v-pre
+                  src="hero-animated.json"
+                  autoplay
+                  background="transparent"
+                  controls:false
+                  hover:false
+                  loop:true
+                  speed:1
+                  preserveAspectRatio="xMidYMid slice"
+                ></lottie-player>
+                <!-- <img
                   class="light-image-l hero-mockup"
                   src="/@src/assets/illustrations/landing/hero-picture.svg"
                   alt=""
@@ -50,7 +62,7 @@ useHead({
                   class="dark-image-l hero-mockup"
                   src="/@src/assets/illustrations/landing/hero-picture.svg"
                   alt=""
-                />
+                /> -->
               </div>
             </div>
           </div>

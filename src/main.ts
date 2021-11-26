@@ -18,6 +18,7 @@ import { createApp } from './app'
  *
  * @see /@src/app.ts for more detailed informations
  */
+
 createApp({
   async enhanceApp(app) {
     // Lazy load aditional components
@@ -45,6 +46,8 @@ createApp({
     app.directive('has-nested-router-link', hasNestedRouterLink)
     app.directive('background', background)
     app.directive('tooltip', tooltip)
+
+    // app.config.compilerOptions.isCustomElement = (tag) => tag.startsWith('lottie-player')
   },
 }).then(async ({ app, router }) => {
   await router.isReady()
