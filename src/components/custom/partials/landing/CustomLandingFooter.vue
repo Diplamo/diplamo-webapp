@@ -9,7 +9,7 @@
         <div class="head-action">
           <div class="buttons">
             <VButton
-              :to="{ name: 'auth-signup-3' }"
+              :to="{ name: 'auth-onboarding' }"
               color="primary"
               bold
               rounded
@@ -72,7 +72,7 @@
             <!-- Column -->
             <div class="column">
               <ul class="footer-column">
-                <li class="column-header">Lillup</li>
+                <li class="column-header">Diplamo</li>
                 <li class="column-item"><a href="#">Our values</a></li>
                 <li class="column-item"><a href="#">Contact us</a></li>
                 <li class="column-item"><a href="#">Schedule a call</a></li>
@@ -98,7 +98,7 @@
         </div>
       </div>
       <div class="footer-copyright has-text-centered">
-        <p>&copy; 2018-2021 | <a to="#">Lillup</a></p>
+        <p>&copy; 2021 | <a to="#">Diplamo</a></p>
       </div>
     </div>
   </footer>

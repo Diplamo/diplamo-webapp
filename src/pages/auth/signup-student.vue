@@ -17,14 +17,14 @@ const handleSignup = async () => {
     sleep(2000)
 
     notif.dismissAll()
-    notif.success('Welcome, Erik Kovalsky')
+    notif.success('Welcome, John Doe')
     router.push({ name: 'sidebar-dashboards' })
     isLoading.value = false
   }
 }
 
 useHead({
-  title: 'Auth Signup 3 - Vuero',
+  title: 'Diplamo  - Signup',
 })
 </script>
 
@@ -35,7 +35,12 @@ useHead({
       <div class="left"></div>
       <div class="center">
         <RouterLink :to="{ name: 'index' }" class="header-item">
-          <AnimatedLogo width="38px" height="38px" />
+          <img
+            src="../../assets/illustrations/diplamo-logo.svg"
+            alt=""
+            width="38px"
+            height="38px"
+          />
         </RouterLink>
       </div>
       <div class="right">
@@ -57,7 +62,7 @@ useHead({
         <div class="auth-head">
           <h2>Join Us Now.</h2>
           <p>Start by creating your account</p>
-          <RouterLink :to="{ name: 'auth-login-3' }">
+          <RouterLink :to="{ name: 'auth-login' }">
             I already have an account
           </RouterLink>
         </div>
@@ -110,7 +115,7 @@ useHead({
                 </VControl>
               </VField>
 
-              <VField>
+              <!-- <VField>
                 <VControl class="setting-item">
                   <label for="send-promotional" class="form-switch is-primary">
                     <input
@@ -126,13 +131,14 @@ useHead({
                     </label>
                   </div>
                 </VControl>
-              </VField>
+              </VField> -->
+              <br />
 
               <!-- Submit -->
               <VField>
                 <VControl class="login">
                   <VButton
-                    :to="{ name: 'auth-OnboardingV5' }"
+                    :to="{ name: 'auth-login' }"
                     color="primary"
                     bold
                     fullwidth

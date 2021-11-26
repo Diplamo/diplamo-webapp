@@ -11,21 +11,27 @@
         <div class="onboarding-card">
           <img
             class="light-image"
-            src="/@src/assets/illustrations/onboarding/set6-1.svg"
+            src="../../assets/illustrations/pricing/student.png"
             alt=""
           />
           <img
             class="dark-image"
-            src="/@src/assets/illustrations/onboarding/set6-1-dark.svg"
+            src="../../assets/illustrations/pricing/student-white.png"
             alt=""
           />
+          <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+
           <h3>Individual</h3>
           <p>
             Students and researchers, both from academic institutions and
-            independent. tament.
+            independent.
           </p>
           <div class="button-wrap">
-            <VButton :to="{ name: 'auth-login-3' }" color="primary" elevated>
+            <VButton
+              :to="{ name: 'auth-signup-student' }"
+              color="primary"
+              elevated
+            >
               Join
             </VButton>
           </div>
@@ -34,18 +40,19 @@
         <div class="onboarding-card">
           <img
             class="light-image"
-            src="/@src/assets/illustrations/onboarding/set6-3.svg"
+            src="../../assets/illustrations/pricing/univeristy.png"
             alt=""
           />
           <img
             class="dark-image"
-            src="/@src/assets/illustrations/onboarding/set6-3-dark.svg"
+            src="../../assets/illustrations/pricing/university-white.png"
             alt=""
           />
+          <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
           <h3>Institution</h3>
           <p>
             Academic institutions, research institutes and educational
-            organizations. tament.
+            organizations.
           </p>
           <div class="button-wrap">
             <VButton color="primary" elevated> Contact us </VButton>
