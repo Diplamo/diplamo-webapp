@@ -55,7 +55,13 @@
             organizations.
           </p>
           <div class="button-wrap">
-            <VButton color="primary" elevated> Contact us </VButton>
+            <VButton
+              :to="{ name: 'auth-signup-university' }"
+              color="primary"
+              elevated
+            >
+              Join
+            </VButton>
           </div>
         </div>
       </div>

@@ -1,25 +1,60 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useHead } from '@vueuse/head'
 import useNotyf from '/@src/composable/useNotyf'
 
 import { isDark, toggleDarkModeHandler } from '/@src/state/darkModeState'
+import { useUserSession } from '/@src/stores/userSession'
 import sleep from '/@src/utils/sleep'
+
+import Moralis from 'moralis'
 
 const router = useRouter()
 const notif = useNotyf()
+const userSession = useUserSession()
 const isLoading = ref(false)
+
+const username = ref('')
+const email = ref('')
+const password = ref('')
+const passRepeat = ref('')
+
+const isDisabled = computed(() => password.value !== passRepeat.value)
+
+// const isDisabled = ref(password.value == passRepeat.value)
 
 const handleSignup = async () => {
   if (!isLoading.value) {
     isLoading.value = true
     sleep(2000)
 
-    notif.dismissAll()
-    notif.success('Welcome, John Doe')
-    router.push({ name: 'sidebar-dashboards' })
-    isLoading.value = false
+    const user = new Moralis.User()
+    user.set('username', username.value)
+    user.set('password', password.value)
+    user.set('email', email.value)
+    user.set('role', 'Student')
+
+    try {
+      await user.signUp()
+      try {
+        userSession.setUser(user)
+        userSession.setToken(user.getSessionToken())
+
+        notif.dismissAll()
+        notif.success('Welcome')
+        router.push({ name: 'view-certificates' })
+        isLoading.value = false
+      } finally {
+      }
+
+      // Hooray! Let them use the app now.
+    } catch (error) {
+      if (error instanceof Error) {
+        // Show the error message somewhere and let the user try again.
+        alert('Error: ' + error.message)
+      }
+    }
   }
 }
 
@@ -75,6 +110,7 @@ useHead({
               <VField>
                 <VControl icon="feather:user">
                   <input
+                    v-model="username"
                     class="input"
                     type="text"
                     placeholder="Name"
@@ -86,6 +122,7 @@ useHead({
               <VField>
                 <VControl icon="feather:mail">
                   <input
+                    v-model="email"
                     class="input"
                     type="text"
                     placeholder="Email Address"
@@ -97,6 +134,7 @@ useHead({
               <VField>
                 <VControl icon="feather:lock">
                   <input
+                    v-model="password"
                     class="input"
                     type="password"
                     placeholder="Password"
@@ -108,6 +146,7 @@ useHead({
               <VField>
                 <VControl icon="feather:lock">
                   <input
+                    v-model="passRepeat"
                     class="input"
                     type="password"
                     placeholder="Repeat Password"
@@ -138,7 +177,9 @@ useHead({
               <VField>
                 <VControl class="login">
                   <VButton
-                    :to="{ name: 'auth-login' }"
+                    :loading="isLoading"
+                    :disabled="isDisabled"
+                    type="submit"
                     color="primary"
                     bold
                     fullwidth

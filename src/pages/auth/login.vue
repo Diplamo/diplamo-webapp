@@ -8,33 +8,52 @@ import { useUserSession } from '/@src/stores/userSession'
 import useNotyf from '/@src/composable/useNotyf'
 import sleep from '/@src/utils/sleep'
 
+import Moralis from 'moralis'
+
 const isLoading = ref(false)
 const router = useRouter()
 const route = useRoute()
 const notif = useNotyf()
 const userSession = useUserSession()
-const redirect = route.query.redirect as string
+// const redirect = route.query.redirect as string
+
+const username = ref('')
+const password = ref('')
 
 const handleLogin = async () => {
   if (!isLoading.value) {
     isLoading.value = true
 
     await sleep(2000)
-    userSession.setToken('logged-in')
+
+    const user = await Moralis.User.logIn(username.value, password.value)
+    userSession.setUser(user)
+    userSession.setToken(user.getSessionToken())
+
+    // const userRole = user.role
 
     notif.dismissAll()
-    notif.success('Welcome back, John Doe')
+    notif.success('Welcome back')
 
-    if (redirect) {
-      router.push(redirect)
-    } else {
-      router.push({
-        name: 'view-certificates',
-      })
+    // if (redirect) {
+    //   router.push(redirect)
+    // } else {
+    switch (Moralis.User.current().get('role')) {
+      case 'Student':
+        router.push({
+          name: 'view-certificates',
+        })
+        break
+      case 'University':
+        router.push({
+          name: 'send-certificates',
+        })
+        break
+      default:
     }
-
-    isLoading.value = false
   }
+  isLoading.value = false
+  // }
 }
 
 useHead({
@@ -88,6 +107,7 @@ useHead({
               <VField>
                 <VControl icon="feather:user">
                   <input
+                    v-model="username"
                     class="input"
                     type="text"
                     placeholder="Username"
@@ -98,6 +118,7 @@ useHead({
               <VField>
                 <VControl icon="feather:lock">
                   <input
+                    v-model="password"
                     class="input"
                     type="password"
                     placeholder="Password"

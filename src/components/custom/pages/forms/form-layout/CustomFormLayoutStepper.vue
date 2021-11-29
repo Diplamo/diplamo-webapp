@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { nextTick, ref } from 'vue'
+import { nextTick, ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import VueScrollTo from 'vue-scrollto'
 import useNotyf from '/@src/composable/useNotyf'
 import sleep from '/@src/utils/sleep'
+import Moralis from 'moralis'
+import Web3 from 'web3/dist/web3.min.js'
 
 const router = useRouter()
 const notyf = useNotyf()
@@ -20,11 +22,263 @@ const taxStatements = ref('')
 const initialDate = ref(new Date())
 const finalDate = ref(new Date())
 
+const student = ref('')
+const title = ref('')
+const startDate = ref('')
+const completionDate = ref('')
+const score = ref('')
+const maximumScore = ref('')
+
+// let optionsSingle = ref([])
+// onMounted(async () => {
+//   const User = Moralis.Object.extend('User')
+//   const query = new Moralis.Query(User)
+//   query.equalTo('username', 'demouni')
+//   optionsSingle = await query.find()
+// })
+let optionsSingle = ['student123']
+
+console.log('Query results: ', optionsSingle)
+
+const ABI = [
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'bytes32',
+        name: 'role',
+        type: 'bytes32',
+      },
+      {
+        indexed: true,
+        internalType: 'bytes32',
+        name: 'previousAdminRole',
+        type: 'bytes32',
+      },
+      {
+        indexed: true,
+        internalType: 'bytes32',
+        name: 'newAdminRole',
+        type: 'bytes32',
+      },
+    ],
+    name: 'RoleAdminChanged',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'bytes32',
+        name: 'role',
+        type: 'bytes32',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'account',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'sender',
+        type: 'address',
+      },
+    ],
+    name: 'RoleGranted',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: 'bytes32',
+        name: 'role',
+        type: 'bytes32',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'account',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'sender',
+        type: 'address',
+      },
+    ],
+    name: 'RoleRevoked',
+    type: 'event',
+  },
+  {
+    inputs: [],
+    name: 'DEFAULT_ADMIN_ROLE',
+    outputs: [
+      {
+        internalType: 'bytes32',
+        name: '',
+        type: 'bytes32',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'bytes32',
+        name: 'role',
+        type: 'bytes32',
+      },
+    ],
+    name: 'getRoleAdmin',
+    outputs: [
+      {
+        internalType: 'bytes32',
+        name: '',
+        type: 'bytes32',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'bytes32',
+        name: 'role',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'address',
+        name: 'account',
+        type: 'address',
+      },
+    ],
+    name: 'grantRole',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'bytes32',
+        name: 'role',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'address',
+        name: 'account',
+        type: 'address',
+      },
+    ],
+    name: 'hasRole',
+    outputs: [
+      {
+        internalType: 'bool',
+        name: '',
+        type: 'bool',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'bytes32',
+        name: 'role',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'address',
+        name: 'account',
+        type: 'address',
+      },
+    ],
+    name: 'renounceRole',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'bytes32',
+        name: 'role',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'address',
+        name: 'account',
+        type: 'address',
+      },
+    ],
+    name: 'revokeRole',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'bytes4',
+        name: 'interfaceId',
+        type: 'bytes4',
+      },
+    ],
+    name: 'supportsInterface',
+    outputs: [
+      {
+        internalType: 'bool',
+        name: '',
+        type: 'bool',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+]
+
+const options = {
+  contractAddress: '0x954933b3a3a47f888bfdb178950a8dbe3cb34065',
+  functionName: 'createAmpersand',
+  abi: ABI,
+  params: {
+    receiver: '0x2...45',
+    _ampersandURI: 'https://prjlnssh1idr.usemoralis.com/%7Bid%7D.json',
+  },
+}
+
 const validateStep = async () => {
   if (currentStep.value === 4) {
     if (isLoading.value) {
       return
     }
+
+    let web3 = await Moralis.enableWeb3()
+
+    let currentAddress = await web3.eth.getAccounts()
+    await Moralis.link(currentAddress[0], {
+      signingMessage: 'Link Wallet To Account',
+    })
+
+    const receipt = await Moralis.executeFunction(options)
+    console.log(receipt)
+
+    // console.log('User: ', Moralis.User.current())
+    // console.log(currentAddress)
+
+    // Moralis.authenticate().then(function (user: any) {
+    //   console.log('Eth address: ', user.get('ethAddress'))
+    // })
 
     isLoading.value = true
     notyf.success('Send request was successfully sent to the blockchain')
@@ -134,10 +388,20 @@ const validateStep = async () => {
           </h3>
 
           <div class="form-section-inner">
-            <VField>
+            <VField class="is-autocomplete-select">
+              <VControl icon="feather:search">
+                <Multiselect
+                  v-model="student"
+                  :options="optionsSingle"
+                  placeholder="Search students..."
+                  :searchable="true"
+                />
+              </VControl>
+            </VField>
+            <!-- <VField>
               Name: Konrad Kovalsky <br />Wallet:
               b32e9a84as0b45b8ab715e4df793a61b277bafa3
-            </VField>
+            </VField> -->
           </div>
         </div>
 
@@ -156,6 +420,7 @@ const validateStep = async () => {
                 <label>Title</label>
                 <VControl>
                   <input
+                    v-model="title"
                     type="text"
                     class="input"
                     placeholder="Enter the degree title as it will be shown in the certificate"
@@ -258,7 +523,12 @@ const validateStep = async () => {
                   <VField>
                     <label>Score</label>
                     <VControl>
-                      <input type="text" class="input" placeholder="Score" />
+                      <input
+                        v-model="score"
+                        type="text"
+                        class="input"
+                        placeholder="Score"
+                      />
                     </VControl>
                   </VField>
                 </div>
@@ -267,6 +537,7 @@ const validateStep = async () => {
                     <label>Maximum score</label>
                     <VControl>
                       <input
+                        v-model="maximumScore"
                         type="text"
                         class="input"
                         placeholder="Maximum possible score"
@@ -311,11 +582,10 @@ const validateStep = async () => {
                   </p>
                   <br />
                   <l>
-                    <li>Student: Konrad Kowalski</li>
-                    <li>Wallet: b32e9a84as0b45b8ab715e4df793a61b277bafa3</li>
-                    <li>Degree: Computer Science BSc</li>
-                    <li>Dates: 01-07-2018 to 01-05-2021</li>
-                    <li>Grade: 7/10</li>
+                    <li>Student: {{ student }}</li>
+                    <li>Degree: {{ title }}</li>
+                    <li>Dates: {{ initialDate }} to {{ finalDate }}</li>
+                    <li>Grade: {{ score }}/{{ maximumScore }}</li>
                   </l>
                 </div>
               </div>

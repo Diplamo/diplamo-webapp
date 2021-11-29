@@ -9,6 +9,18 @@
 
 import { useHead } from '@vueuse/head'
 import { pageTitle } from '/@src/state/navbarLayoutState'
+import { onMounted } from 'vue'
+import sleep from '/@src/utils/sleep'
+import Moralis from 'moralis'
+import Web3 from 'web3/dist/web3.min.js'
+
+onMounted(async () => {
+  let web3 = await Moralis.enableWeb3()
+  let currentAddress = await web3.eth.getAccounts()
+  await Moralis.link(currentAddress[0], {
+    signingMessage: 'Link Wallet To Account',
+  })
+})
 
 pageTitle.value = 'View Certificates'
 useHead({
@@ -36,7 +48,7 @@ const data = [
 </script>
 
 <template>
-  <CustomNavbarSearchLayout theme="center">
+  <CustomNavbarSearchLayoutStudent theme="center">
     <!-- Content Wrapper -->
     <div class="page-content-inner">
       <!--VFlexTable-->
@@ -64,5 +76,5 @@ const data = [
         :max-links-displayed="1"
       />
     </div>
-  </CustomNavbarSearchLayout>
+  </CustomNavbarSearchLayoutStudent>
 </template>

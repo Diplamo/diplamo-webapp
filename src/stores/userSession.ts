@@ -1,8 +1,11 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 import { useStorage } from '@vueuse/core'
+import Moralis from 'moralis/types'
 
-export type UserData = Record<string, any> | null
+export interface UserData extends Moralis.User<Moralis.Attributes> {
+  createdAt: Date
+}
 
 export const useUserSession = defineStore('userSession', () => {
   const token = useStorage('token', '')

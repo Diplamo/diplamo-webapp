@@ -40,6 +40,9 @@ export default defineConfig({
    *
    * @see https://vitejs.dev/config/#optimizedeps-entries
    */
+  define: {
+    'process.env': process.env,
+  },
   optimizeDeps: {
     include: [
       '@ckeditor/ckeditor5-vue',

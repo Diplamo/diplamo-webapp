@@ -27,6 +27,20 @@
        */
       var global = global || window
     </script>
+    <script type="module">
+      /**
+       To solve a problem with a not defined buffer (related to nodej and web3.js)
+       see https://githubmemory.com/repo/vitejs/vite/issues/3817?page=2
+       https://github.com/EvinqWang/vite_vue3_web3
+       */
+      import { Buffer } from 'buffer'
+      import EventEmitter from 'events'
+      import process from 'process'
+      window.Buffer = Buffer
+      window.EventEmitter = EventEmitter
+      window.process = process
+    </script>
+
     <link
       rel="preload"
       as="style"

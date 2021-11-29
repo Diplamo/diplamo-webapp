@@ -13,11 +13,19 @@
 
 import { createApp } from './app'
 
+// "pinia-plugin-persist": "^0.0.92",
+// import { createPinia } from 'pinia'
+// import piniaPersist from 'pinia-plugin-persist'
+// const store = createPinia().use(piniaPersist)
+
 /**
  * We create our app and mount it when it is ready
  *
  * @see /@src/app.ts for more detailed informations
  */
+
+import MoralisConfig from './config/moralis'
+import Web3 from 'web3/dist/web3.min.js'
 
 createApp({
   async enhanceApp(app) {
@@ -26,12 +34,17 @@ createApp({
     const VueMultiselect = (await import('@vueform/multiselect')).default
     const VueSlider = (await import('@vueform/slider')).default
     const VueTippy = (await import('vue-tippy')).default
-
     const hasNestedRouterLink = (
       await import('./directives/has-nested-router-link')
     ).default
     const background = (await import('./directives/background')).default
     const tooltip = (await import('./directives/tooltip')).default
+
+    const web3 = new Web3()
+    app.config.globalProperties.$moralis = MoralisConfig
+    app.config.globalProperties.$web3 = web3
+
+    // app.use(store)
 
     app.use(VCalendar)
     app.use(VueTippy, {
