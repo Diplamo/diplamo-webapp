@@ -1,2 +1,2 @@
-# lillup-webapp
-Web application for interacting with ampersand token
+# Diplamo-webapp
+To be written
