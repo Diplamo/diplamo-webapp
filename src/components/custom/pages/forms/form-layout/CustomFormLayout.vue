@@ -36,7 +36,7 @@ const confirmation = async () => {
             <div class="buttons">
               <VButton
                 icon="lnir lnir-arrow-left rem-100"
-                :to="{ name: 'view-certificates' }"
+                :to="{ name: 'student-view-certificates' }"
                 light
                 dark-outlined
               >

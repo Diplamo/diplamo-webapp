@@ -17,10 +17,10 @@ useHead({
 </script>
 
 <template>
-  <CustomNavbarSearchLayout theme="center">
+  <CustomNavbarSearchLayoutUni theme="center">
     <!-- Content Wrapper -->
     <div class="page-content-inner">
       <CustomFormLayoutStepper class="is-navbar" />
     </div>
-  </CustomNavbarSearchLayout>
+  </CustomNavbarSearchLayoutUni>
 </template>

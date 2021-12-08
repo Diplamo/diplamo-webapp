@@ -19,18 +19,17 @@ const userSession = useUserSession()
 
 const username = ref('')
 const password = ref('')
+// const username = document.getElementById('username').value
+// const password = document.getElementById('password').value
 
 const handleLogin = async () => {
   if (!isLoading.value) {
     isLoading.value = true
 
     await sleep(2000)
-
     const user = await Moralis.User.logIn(username.value, password.value)
     userSession.setUser(user)
     userSession.setToken(user.getSessionToken())
-
-    // const userRole = user.role
 
     notif.dismissAll()
     notif.success('Welcome back')
@@ -41,12 +40,12 @@ const handleLogin = async () => {
     switch (Moralis.User.current().get('role')) {
       case 'Student':
         router.push({
-          name: 'view-certificates',
+          name: 'student-view-certificates',
         })
         break
       case 'University':
         router.push({
-          name: 'send-certificates',
+          name: 'uni-send-certificates',
         })
         break
       default:
@@ -107,6 +106,7 @@ useHead({
               <VField>
                 <VControl icon="feather:user">
                   <input
+                    id="username"
                     v-model="username"
                     class="input"
                     type="text"
@@ -118,6 +118,7 @@ useHead({
               <VField>
                 <VControl icon="feather:lock">
                   <input
+                    id="password"
                     v-model="password"
                     class="input"
                     type="password"

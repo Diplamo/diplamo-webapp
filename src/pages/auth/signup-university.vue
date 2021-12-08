@@ -43,7 +43,7 @@ const handleSignup = async () => {
 
         notif.dismissAll()
         notif.success('Welcome')
-        router.push({ name: 'send-certificates' })
+        router.push({ name: 'uni-send-certificates' })
         isLoading.value = false
       } finally {
       }
