@@ -7,6 +7,8 @@ For the backend Moralis was used for user authentication and management, databas
 
 The website is responsive on phone.
 
+Some parts are mocked because we didn´t have to set up everything for the hackathon deadline.
+
 ![web-gif](https://user-images.githubusercontent.com/78375761/145259770-c4969a48-ffeb-47c0-bec5-a6156de4a6e9.gif)
 
 # Run locally
