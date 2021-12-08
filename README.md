@@ -12,4 +12,5 @@ Some parts are mocked because we didn´t have to set up everything for the hacka
 ![web-gif](https://user-images.githubusercontent.com/78375761/145259770-c4969a48-ffeb-47c0-bec5-a6156de4a6e9.gif)
 
 # Run locally
-Fork the repo and run 'npm install' and then run 'dev' from the npm scripts. You would also have to set up your own Moralis server credentials (id and url) in an .env file, if you want to use Moralis. Disclaimer: I haven´t checked whether these instructions work.
+Fork the repo and run 'npm install' and then run 'dev' from the npm scripts. You would also have to set up your own Moralis server credentials (id and url) in an .env file, if you want to use Moralis.
+Disclaimer: I haven´t checked whether these instructions work.
