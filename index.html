@@ -20,19 +20,17 @@
     />
     <title>Diplamo</title>
     <script>
-      /**
-       * this is a hack for dragula used on KanbanApp
-       *
-       * @see src/components/pages/apps/KanbanApp.vue
-       */
       var global = global || window
     </script>
+
     <script type="module">
-      /**
-       To solve a problem with a not defined buffer (related to nodej and web3.js)
-       see https://githubmemory.com/repo/vitejs/vite/issues/3817?page=2
-       https://github.com/EvinqWang/vite_vue3_web3
-       */
+      // see https://githubmemory.com/repo/vitejs/vite/issues/3817?page=2
+      // https://github.com/EvinqWang/vite_vue3_web3
+      // This solution works in dev only.
+      // For prod/build I use "@rollup/plugin-inject" for vite:
+      // see https://github.com/vitejs/vite/discussions/2785
+      // There is also this solution if you are using webpack in prod:
+      // https://forum.moralis.io/t/dependency-issues-with-webpack/2006/8
       import { Buffer } from 'buffer'
       import EventEmitter from 'events'
       import process from 'process'
@@ -61,17 +59,9 @@
     />
   </head>
   <body>
-    <!-- 
-      this is a placeholder for Teleport's vue feature
-
-      @see /src/pages/navbar/dashboards/influencer.vue
-      @see /src/pages/sidebar/dashboards/influencer.vue
-    -->
     <div data-teleport-bg></div>
-
     <div id="app" class="app-wrapper"></div>
     <script type="module" src="/src/styles.ts"></script>
-
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
