@@ -5,7 +5,7 @@ This webapp was built for a project submission for the Chainlink Fall Hackathon 
 The frontend is TypeScript and VueJS. 
 For the backend Moralis was used for user authentication and management, database storage with MongoDB, and connection to the smart contracts, which are deployed on the Polygon Mumbai testnet. The website is hosted on pythonanywhere with some very basic flask.
 
-The website is responsive on phone.
+The website is responsive on mobile.
 
 Some parts are mocked because we didn´t have to set up everything for the hackathon deadline.
 
