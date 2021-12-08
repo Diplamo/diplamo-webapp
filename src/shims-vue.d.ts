@@ -3,7 +3,11 @@ declare module '*.md' {
   const Component: ReturnType<typeof defineComponent>
   export default Component
 }
-
+declare module '*.vue' {
+  import type { DefineComponent } from 'vue'
+  const component: DefineComponent<{}, {}, any>
+  export default component
+}
 declare module 'vue3-apexcharts'
 declare module '@vueform/multiselect'
 declare module '@vueform/slider'

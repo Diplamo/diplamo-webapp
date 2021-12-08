@@ -43,7 +43,7 @@ const handleSignup = async () => {
 
         notif.dismissAll()
         notif.success('Welcome')
-        router.push({ name: 'view-certificates' })
+        router.push({ name: 'student-view-certificates' })
         isLoading.value = false
       } finally {
       }

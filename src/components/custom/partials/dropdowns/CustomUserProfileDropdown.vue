@@ -1,3 +1,19 @@
+<script setup lang="ts">
+import { useRouter, useRoute } from 'vue-router'
+import Moralis from 'moralis'
+const router = useRouter()
+
+const username = Moralis.User.current().getUsername()
+const role = Moralis.User.current().get('role')
+
+const handleLogout = async () => {
+  await Moralis.User.logOut()
+  router.push({
+    name: 'index',
+  })
+}
+</script>
+
 <template>
   <VDropdown right spaced class="user-dropdown profile-dropdown">
     <template #button="{ toggle }">
@@ -15,8 +31,8 @@
         <VAvatar size="large" picture="/images/avatars/svg/vuero-1.svg" />
 
         <div class="meta">
-          <span>John Doe</span>
-          <span>Student</span>
+          <span>{{ username }}</span>
+          <span>{{ role }}</span>
         </div>
       </div>
 
@@ -40,6 +56,7 @@
           role="menuitem"
           raised
           fullwidth
+          @click="handleLogout"
         >
           Logout
         </VButton>

@@ -9,6 +9,9 @@
 
 import { useHead } from '@vueuse/head'
 import { pageTitle } from '/@src/state/navbarLayoutState'
+// import { useRouter } from 'vue-router'
+
+// const router = useRouter()
 
 pageTitle.value = 'FAQ'
 useHead({
@@ -49,7 +52,7 @@ const data = [
 </script>
 
 <template>
-  <CustomNavbarSearchLayout theme="center">
+  <CustomNavbarSearchLayoutStudent theme="center">
     <!-- Content Wrapper -->
     <div class="page-content-inner">
       <VCollapse :items="data" with-chevron />
@@ -61,5 +64,5 @@ const data = [
         </VButton>
       </VButtons>
     </div>
-  </CustomNavbarSearchLayout>
+  </CustomNavbarSearchLayoutStudent>
 </template>

@@ -8,10 +8,10 @@ import ViteRadar from 'vite-plugin-radar'
 import PurgeIcons from 'vite-plugin-purge-icons'
 import { imagetools } from 'vite-imagetools'
 import ImageMin from 'vite-plugin-imagemin'
-// import VueroDocumentation from './vite-plugin-vuero-doc/index'
 import { vueI18n } from '@intlify/vite-plugin-vue-i18n'
 import { VitePWA } from 'vite-plugin-pwa'
 import purgecss from 'rollup-plugin-purgecss'
+import inject from '@rollup/plugin-inject'
 
 const SILENT = Boolean(process.env.SILENT) ?? false
 const SOURCE_MAP = Boolean(process.env.SOURCE_MAP) ?? false
@@ -40,9 +40,6 @@ export default defineConfig({
    *
    * @see https://vitejs.dev/config/#optimizedeps-entries
    */
-  define: {
-    'process.env': process.env,
-  },
   optimizeDeps: {
     include: [
       '@ckeditor/ckeditor5-vue',
@@ -89,16 +86,14 @@ export default defineConfig({
   },
   // Will be passed to @rollup/plugin-alias as its entries option.
   resolve: {
-    alias: [
-      {
-        find: '/~/',
-        replacement: `/src/assets/`,
-      },
-      {
-        find: '/@src/',
-        replacement: `/src/`,
-      },
-    ],
+    alias: {
+      '/~/': `/src/assets/`,
+      '/@src/': `/src/`,
+      process: 'process/browser',
+      stream: 'stream-browserify',
+      zlib: 'browserify-zlib',
+      util: 'util',
+    },
   },
 
   build: {
@@ -113,6 +108,10 @@ export default defineConfig({
      * Don't forget to remove this section when you replaced assets with yours
      */
     rollupOptions: {
+      plugins: [
+        inject({ Buffer: ['Buffer', 'Buffer'] }),
+        inject({ Buffer: ['process', 'process'] }),
+      ],
       external: [/\/demo\/.*/],
     },
   },

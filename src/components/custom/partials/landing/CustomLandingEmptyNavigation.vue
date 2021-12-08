@@ -70,20 +70,6 @@ watchEffect(() => {
       </div>
 
       <div class="navbar-menu" :class="[isMobileNavOpen && 'is-active']">
-        <!-- <div class="navbar-start">
-        <div class="navbar-item">
-          <h1 class="title is-3 is-bold">Diplamo</h1>
-          <RouterLink
-            :to="{
-              name: 'index',
-            }"
-            class="nav-link"
-          >
-            Diplamo
-          </RouterLink>
-        </div>
-      </div> -->
-
         <div class="navbar-end">
           <div class="navbar-item is-theme-toggle">
             <label class="theme-toggle">
