@@ -1,0 +1,28 @@
+TODO:
+
+ABI in separate file. Clean the mess from the night before the deadline.
+Report the problem with email authentificaion in production when calling Moralis.User.logIn() to Moralis so they get to work on it/share a solution
+
+TODO LIST IF I WERE TO CONTINUE WITH THIS PROJECT:
+
+Get the smart contracts to workand the frontend to connect to them
+Get student wallet from database using cloud functions as user data is sentitive. Change mockups for the real thing.
+Remove unused python backend, and unused files from the tempalte
+Set roles for the backend calls for Users and Universities using Moralis?
+
+Do pages: FAQ; Schedule Call, Support, Profile settings (change pass, change email, reset pass, signup admin)
+Add a path to decentralization page
+Validate email with confirmation email
+
+Polish login/sign up validation display. Change the nonstop loading animation
+Have a logged in navbar for the home page
+Optimize the page. Follow recommendations from this tool: https://pagespeed.web.dev/
+Navbar giving problems in the ipad pro at least from my browser simulated rendering
+
+BIGGEST FAILURE FOR THIS HACKATHON:
+
+Not being critical enough with teammates. Need to be more critical and screen better for proactive people.
+
+
+
+
